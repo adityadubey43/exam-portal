@@ -3,7 +3,7 @@ import { useState } from 'react';
 import axios from 'axios';
 
 const User = JSON.parse(window.localStorage.getItem('user'));
-console.log(User.name)
+console.log(User)
 const Register = () => {
     const APIurl = 'https://exam-express-khaki.vercel.app/api/exam/'
 
