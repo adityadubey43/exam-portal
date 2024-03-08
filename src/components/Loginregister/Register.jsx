@@ -2,10 +2,10 @@ import React from 'react'
 import { useState } from 'react';
 import axios from 'axios';
 
-
+const User = JSON.parse(window.localStorage.getItem('user'));
+console.log(User.name)
 const Register = () => {
-
-    const APIurl = 'http://localhost:5000/api/exam/'
+    const APIurl = 'https://exam-express-khaki.vercel.app/api/exam/'
 
     const [formData, setFormData] = useState({
         name: '',

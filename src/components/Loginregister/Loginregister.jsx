@@ -1,11 +1,13 @@
 import React from 'react'
 import { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom'; 
 
 
 const Loginregister = () => {
+  const navigate = useNavigate();
 
-    const APIurl = 'http://localhost:5000/api/exam/'
+    const APIurl = 'https://exam-express-khaki.vercel.app/api/exam/'
 
     const [formData, setFormData] = useState({
        
@@ -25,8 +27,12 @@ const Loginregister = () => {
         try {
           const response = await axios.post(APIurl+'/login', formData); // Replace '/api/signup' with your actual backend endpoint
           if (response.status === 200) {
-            alert('Signup successful');
-            console.log(response.data.token);
+            // alert('Signup successful');
+            window.localStorage.setItem('Token',response.data.token);
+            window.localStorage.setItem('user',JSON.stringify(response.data.userDetailsWithoutPassword));
+
+            console.log(response.data.token + response.data.userDetailsWithoutPassword.name);
+            navigate('/register');
             // Optionally, redirect to another page or perform any other action upon successful signup
           } else {
             setError('Signup failed. Please try again.');
