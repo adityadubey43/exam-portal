@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 const Loginregister = () => {
   const navigate = useNavigate();
 
-    const APIurl = 'https://exam-express-khaki.vercel.app/api/exam/'
+    const APIurl = 'https://exam-express-khaki.vercel.app/api/exam'
 
     const [formData, setFormData] = useState({
        
