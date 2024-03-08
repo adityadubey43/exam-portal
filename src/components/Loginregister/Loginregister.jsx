@@ -26,7 +26,7 @@ const Loginregister = () => {
           const response = await axios.post(APIurl+'/login', formData); // Replace '/api/signup' with your actual backend endpoint
           if (response.status === 200) {
             alert('Signup successful');
-            console.log(response.data.token)
+            console.log(response.data.token);
             // Optionally, redirect to another page or perform any other action upon successful signup
           } else {
             setError('Signup failed. Please try again.');
