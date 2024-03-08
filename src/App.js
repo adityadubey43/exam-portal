@@ -3,7 +3,6 @@ import './App.css';
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 import Loginregister from '../src/components/Loginregister/Loginregister';
 import Register from './components/Loginregister/Register';
-import AuthGuard from './services/authService';
 
 
 const router = createBrowserRouter([
