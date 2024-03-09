@@ -50,3 +50,34 @@ code {
   color: red;
   margin-bottom: 10px;
 }
+
+.side-panel {
+  position: fixed;
+  top: 0;
+  left: -300px; /* Adjust this value based on your design */
+  width: 300px; /* Adjust width as needed */
+  height: 100%;
+  background-color: #fff; /* Adjust background color as needed */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add box shadow for a nice effect */
+  transition: left 0.3s ease; /* Add smooth transition */
+}
+
+.side-panel.open {
+  left: 0;
+}
+
+.side-panel-content {
+  padding: 20px;
+}
+
+.close-button {
+  margin-top: 20px;
+}
+
+.middle{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+

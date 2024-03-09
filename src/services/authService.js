@@ -10,7 +10,7 @@ const AuthGuard = ({ children }) => {
     return children; // Render the child components (e.g., Register)
   } else {
     // Redirect to the login page
-    return <Navigate to="/login" />;
+    return <Navigate to="/" />;
   }
 };
 
